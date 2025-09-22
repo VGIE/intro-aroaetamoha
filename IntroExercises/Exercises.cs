@@ -81,7 +81,16 @@ namespace IntroExercises
         //  AreEqual(null, null) => false
         public static bool AreEqual(int[] A, int[] B)
         {
-            return true;
+            if (A.Length != B.Length)
+                return false;
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (Count(A, A[i]) == Count(B, B[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
