@@ -24,7 +24,15 @@ namespace IntroExercises
         //Count should return the number of times value appears in array. 0 if the array is empty/null
         public static int Count(int[] array, int value)
         {
-            return 0;
+            int count = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == value)
+                    count++;
+                else
+                    return 0;
+            }
+            return count;
         }
 
         //TODO #3
@@ -32,6 +40,15 @@ namespace IntroExercises
         //-1 if endIndex is less than startIndex or any of them is outside the array
         public static int Find(int[] array, int value, int startIndex, int endIndex)
         {
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == value)
+                    return i;
+                if (endIndex < startIndex)
+                    return -1;
+                else
+                    return -1;
+            }
             return 0;
         }
 
@@ -41,7 +58,17 @@ namespace IntroExercises
 
         public static int Count(int[] array, int value, int startIndex, int endIndex)
         {
-            return 0;
+            int count = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == value && startIndex < endIndex)
+                    count++;
+                if (endIndex < startIndex)
+                    return -0;
+                else
+                    return 0;
+            }
+            return count;
         }
 
         //TODO #5
